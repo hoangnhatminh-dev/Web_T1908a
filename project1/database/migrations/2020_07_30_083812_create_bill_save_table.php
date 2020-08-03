@@ -15,7 +15,7 @@ class CreateBillSaveTable extends Migration
     {
         Schema::create('bill_save', function (Blueprint $table) {
             $table->increments('id_bill');
-            $table->Decimal('balance',12,4);
+            $table->decimal('balance',12,4);
             $table->text('note');
             $table->time('timeBill');
             $table->integer('id_save')->unsigned();
