@@ -16,8 +16,8 @@ class CreateAccTable extends Migration
         Schema::create('acc', function (Blueprint $table) {
             $table->increments('id_acc');
             $table->string('acc_num');
-            $table->Decimal('balance',12,4);
-            $table->Decimal('minus',12,4);
+            $table->decimal('balance',12,4);
+            $table->decimal('minus',12,4);
             $table->date('edate');
             $table->integer('id_user')->unsigned();
             $table->foreign('id_user')->references('id')->on('userb');
